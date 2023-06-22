@@ -2831,3 +2831,13 @@ span.error {
   cursor: pointer;
   background-color: lime !important;
 }
+#navbar {
+  background: linear-gradient(black, black, black, transparent);
+  position: fixed;
+  -webkit-transition: 1.5s all ease;
+  -o-transition: 1.5s all ease;
+  transition: 1.5s all ease;
+}
+.showme {
+  opacity: 0;
+}

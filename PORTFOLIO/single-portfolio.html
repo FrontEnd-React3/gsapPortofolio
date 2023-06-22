@@ -69,13 +69,13 @@
                      </div>
                   </div>
                   <div class="col text-right">
-                     <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                        <li><a href="index.html" class="nav-link cursor-item">Home</a></li>
-                        <li><a href="about.html" class="nav-link cursor-item">About</a></li>
-                        <li><a href="services.html" class="nav-link cursor-item">Services</a></li>
-                        <li><a href="works.html" class="nav-link cursor-item">Works</a></li>
-                        <li><a href="blog.html" class="nav-link cursor-item">References</a></li>
-                        <li><a href="contact.html" class="nav-link cursor-item">Contact</a></li>
+                     <ul class="class="navbar" id="navbar" site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                        <li><a href="#section1" class="nav-link cursor-item">Home</a></li>
+                        <li><a href="#section2" class="nav-link cursor-item">About</a></li>
+                        <li><a href="#section3" class="nav-link cursor-item">Services</a></li>
+                        <li><a href="w#section4" class="nav-link cursor-item">Works</a></li>
+                        <li><a href="#section5" class="nav-link cursor-item">References</a></li>
+                        <li><a href="#section6" class="nav-link cursor-item">Contact</a></li>
                      </ul>
                      <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
                         <li><a href="#" class="js-menu-toggle">Menu</a></li>
@@ -164,7 +164,7 @@
 
 
                         <li><a target="_blank" href="https://www.linkedin.com/in/benedikt-lantsoght-02481319/"
-                              class="cursor-Item">Linkedin</a></li>
+                              class="cursor-item">Linkedin</a></li>
                         <li><a href="#" class="cursor-item">B.Lantsoght@gmail.com</a></li>
                         <li><a href="#" class="cursor-item">T. +32 499 388 227</a></li>
                      </ul>
@@ -225,6 +225,32 @@
    <script src="js/scrollmagic.animation.gsap.min.js"></script>
    <!-- custom -->
    <script src="js/custom.js"></script>
+   <script>
+      // Get all the navbar links
+      const navbarLinks = document.querySelectorAll('.navbar a');
+
+      // Create an intersection observer instance
+      const observer = new IntersectionObserver((entries) => {
+         entries.forEach((entry) => {
+            const targetId = entry.target.getAttribute('id');
+            const correspondingLink = document.querySelector(`.navbar a[href="#${targetId}"]`);
+
+            if (entry.isIntersecting) {
+               correspondingLink.classList.add('active');
+            } else {
+               correspondingLink.classList.remove('active');
+            }
+         });
+      }, {
+         threshold: 0.5
+      });
+
+      // Observe each section
+      document.querySelectorAll('.section').forEach((section) => {
+         observer.observe(section);
+      });
+   </script>
+
 </body>
 
 </html>
