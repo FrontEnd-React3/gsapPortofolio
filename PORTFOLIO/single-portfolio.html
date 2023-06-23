@@ -236,9 +236,9 @@
             const correspondingLink = document.querySelector(`.navbar a[href="#${targetId}"]`);
 
             if (entry.isIntersecting) {
-               correspondingLink.classList.add('active');
+               correspondingLink.classList.add('activeset');
             } else {
-               correspondingLink.classList.remove('active');
+               correspondingLink.classList.remove('activeset');
             }
          });
       }, {

@@ -1115,17 +1115,18 @@ hr {
   text-align: left;
   display: inline-block;
 }
-
-.site-nav .site-nav-ul > li:not(:first-child):after {
+/* schuine lijn navbar */
+/* .site-nav .site-nav-ul > li:not(:first-child):after {
   background: #d7d7d7 none repeat scroll 0 0;
   content: '';
   height: 15px;
   position: absolute;
-  top: 18px;
+  top: 22px;
+  left: 2px;
   transform: rotate(45deg);
   width: 1px;
   margin-right: -18px;
-}
+} */
 
 .site-nav .site-nav-ul > li > a,
 .site-nav .site-nav-ul-none-onepage > li > a {
@@ -2831,7 +2832,7 @@ span.error {
   cursor: pointer;
   background-color: lime !important;
 }
-#navbar {
+#navbarbg {
   background: linear-gradient(black, black, black, transparent);
   position: fixed;
   -webkit-transition: 1.5s all ease;

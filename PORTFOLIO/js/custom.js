@@ -89,8 +89,8 @@
   });
 
   $('.filter-wrapper li a').on('click', function () {
-    $(".filter-wrapper li a").removeClass("active");
-    $(this).addClass("active");
+    $(".filter-wrapper li a").removeClass("activeset");
+    $(this).addClass("activeset");
     var selector = $(this).attr('data-filter');
     $container.imagesLoaded().progress(function () {
       $container.isotope({
